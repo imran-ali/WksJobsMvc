@@ -1,0 +1,71 @@
+﻿@model WksJobsMvc.Models.Job
+
+@{
+    ViewData["Title"] = "Job Details";
+}
+
+<h4>@ViewData["Title"]</h4>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Month)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Month)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.JobType)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.JobType)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.JobTitle)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.JobDescription)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.JobDescription)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.NumberOfPersons)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.NumberOfPersons)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.HoursWorked)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.HoursWorked)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.NoOfDays)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.NoOfDays)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.ThirdPartyServiceCost)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.ThirdPartyServiceCost)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.JobStatus)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.JobStatus)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

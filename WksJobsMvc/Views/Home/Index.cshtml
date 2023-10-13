@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Welcome page";
+}
+
+<div>
+    <h4>Job maintenance platform for any Workshop</h4>
+    <p>Please use the navigation menu on top or use the cards below.</p>
+</div>
+
+
+<div class="row">
+    
+    <div class="col-6">
+        
+        <div class="card">
+            <div class="card-header">
+                Work Area
+            </div>
+            <div class="card-body">
+                <p class="card-text"><a asp-area="" asp-controller="Job" asp-action="Create" class="btn btn-sm btn-primary">Initiate Job Draft</a> <a asp-area="" asp-controller="Job" asp-action="Index" class="btn btn-sm btn-secondary">Jobs Register</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-6">
+
+        <div class="card">
+            <div class="card-header">
+                Administration area
+            </div>
+            <div class="card-body">
+                <p class="card-text"><a asp-area="" asp-controller="Item" asp-action="Create" class="btn btn-sm btn-primary">Item insertion</a> <a asp-area="" asp-controller="Item" asp-action="Index" class="btn btn-sm btn-secondary">Items Register</a></p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<hr />
+<div class="row">
+
+    <div class="col-6">
+
+        <div class="card">
+            <div class="card-header">
+                Features
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    <ul>
+                        <li>Quick Relevant Search</li>
+                        <li>Robust Item Register - with quick search</li>
+                        <li>Usage specific messages and constraints</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-6">
+
+        <div class="card">
+            <div class="card-header">
+                System globals
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    <ul>
+                        <li>Session timeout - 5 minutes.</li>
+                        <li>Password change message - Every 40 days.</li>
+                        <li>Server processed Datatables + filters and dropdowns</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+

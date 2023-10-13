@@ -1,0 +1,118 @@
+﻿@model WksJobsMvc.Models.Job
+
+@{
+    ViewData["Title"] = "Job Initiate";
+}
+
+<h4>@ViewData["Title"]</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="row">
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <label asp-for="JobCode" class="control-label"></label>
+                        <input asp-for="JobCode" class="form-control" />
+                        <span asp-validation-for="JobCode" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <label asp-for="Month" class="control-label"></label>
+                        <input asp-for="Month" class="form-control" />
+                        <span asp-validation-for="Month" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <label asp-for="JobType" class="control-label"></label>
+                        <input asp-for="JobType" class="form-control" />
+                        <span asp-validation-for="JobType" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <label asp-for="JobTitle" class="control-label"></label>
+                        <input asp-for="JobTitle" class="form-control" />
+                        <span asp-validation-for="JobTitle" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <label asp-for="JobDescription" class="control-label"></label>
+                        <input asp-for="JobDescription" class="form-control" />
+                        <span asp-validation-for="JobDescription" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="row">
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <label asp-for="NumberOfPersons" class="control-label"></label>
+                        <input asp-for="NumberOfPersons" min="0" class="form-control" />
+                        <span asp-validation-for="NumberOfPersons" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <label asp-for="HoursWorked" class="control-label"></label>
+                        <input asp-for="HoursWorked" min="0" class="form-control" />
+                        <span asp-validation-for="HoursWorked" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <label asp-for="NoOfDays" class="control-label"></label>
+                        <input asp-for="NoOfDays" min="0" class="form-control" />
+                        <span asp-validation-for="NoOfDays" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <label asp-for="ThirdPartyServiceCost" class="control-label"></label>
+                        <input asp-for="ThirdPartyServiceCost" min="0" class="form-control" />
+                        <span asp-validation-for="ThirdPartyServiceCost" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+            
+            
+            <div class="form-group mt-3">
+                <label asp-for="JobStatus" class="control-label"></label>
+                <input asp-for="JobStatus" class="form-control" />
+                <span asp-validation-for="JobStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <input type="submit" value="Initiate" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
