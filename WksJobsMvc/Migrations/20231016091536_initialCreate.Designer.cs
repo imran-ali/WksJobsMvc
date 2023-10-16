@@ -12,8 +12,8 @@ using WksJobsMvc.Data;
 namespace WksJobsMvc.Migrations
 {
     [DbContext(typeof(WksDbContext))]
-    [Migration("20231011100842_identityAdded")]
-    partial class identityAdded
+    [Migration("20231016091536_initialCreate")]
+    partial class initialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -234,6 +234,9 @@ namespace WksJobsMvc.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("ItemCode")
                         .IsRequired()
